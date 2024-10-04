@@ -1,0 +1,43 @@
+name: Demon-Implant Bug Report
+description: File a bug report for the Demon Implant
+title: "[File a bug report for the Demon Implant]: "
+labels: ["bug"]
+assignees: 
+  - C5pider
+body: 
+  - type: markdown
+    attributes:
+      value: "Thanks for taking the time to fill out this bug report!"
+  - type: textarea
+    id: what-happened
+    attributes: 
+      label: "What happened?"
+      description: "Also tell us, what did you expect to happen?"
+      placeholder: "Tell me about the numbers Mason!"
+      value: "A bug happened!"
+    validations: 
+      required: true
+  - type: dropdown
+    id: branch
+    attributes: 
+      label: Did You Try With the Dev Branch?
+      description: "This branch has the latest features and fixes so it might solve your problem"
+      options: 
+        - "Yes (You tried using the dev branch but the problem persists)"
+        - "No (You only tried the main branch...)"
+    validations: 
+      required: true
+  - type: textarea
+    id: logs
+    attributes: 
+      description: "Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks."
+      label: "Relevant log output"
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes: 
+      label: Did You Read Over Your Issue First?
+      description: "By submitting this issue, you confirm you posted replication steps and information about the issue, so that it may be fully understood ."
+      options: 
+        - label: "I declare I made an effort and provided the necessary information for replication of the issue."
+          required: true
